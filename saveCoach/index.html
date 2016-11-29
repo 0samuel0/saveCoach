@@ -1,0 +1,54 @@
+<!--&lt;!&ndash;  * Created by 0samuel0 on 21-11-2016 * -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/overview.js"></script>
+    <script src="js/expenses.js"></script>
+</head>
+<body>
+<form id="adjustSaldo" onsubmit="return false">
+    <table>
+        <thead><h2>Let's check and adjust our saldo!</h2></thead>
+        <tr>
+            <td>
+                <label for="monthIn">Monthly income:</label></td>
+            <td><input type="number" id="monthIn" placeholder="3000" required/></td>
+        </tr>
+        <tr>
+            <td><label for="monthOut">Monthly expenses:</label></td>
+            <td><input type="number" id="monthOut" placeholder="1500" required/></td>
+        </tr>
+        <tr>
+            <td><label for="minSaldo">Minimum required saldo:</label></td>
+            <td><input type="number" id="minSaldo" placeholder="250" required/></td>
+        </tr>
+        <tr>
+            <td><label for="curSaldo">Current saldo:</label></td>
+            <td><input type="number" id="curSaldo" placeholder="200" required/></td>
+        </tr>
+        <tr>
+            <td></td><td><input type="submit" onclick="calculate()" value="Check saldo"/></td>
+        </tr>
+    </table>
+</form>
+<p id="output"></p>
+<p id="output2"></p>
+<form id="expenseAdd" onsubmit="return false">
+    <table>
+        <thead><h2>Let's add our expenses!</h2></thead>
+        <tr>
+            <td>
+                <label for="expense">Expense:</label></td>
+            <td><input type="number" id="expense" placeholder="3000" required/></td>
+            <td><input type="submit" onclick="expensesAdd()" value="Add expense"/></td>
+        </tr>
+    </table>
+</form>
+<h3>List of expenses</h3>
+<p id="output4"></p>
+<h3>Your total comes down to..</h3>
+<p id="output3"></p>
+</body>
+</html>
